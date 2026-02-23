@@ -1,7 +1,7 @@
 import pandas as pd
 # 读取已经融合的患者特征文件和Excel数据
-fused_csv_path = r'C:\cat\patient_features_fusion_median.csv'
-excel_path = r'C:\大学\大四\大四下\毕设\数据集\data1.xlsx'
+fused_csv_path = 'patient_features_fusion_median.csv'
+excel_path = 'data1.xlsx'
 
 # 读取融合后的特征和Excel文件
 fused_df = pd.read_csv(fused_csv_path)
@@ -15,6 +15,7 @@ fused_df['Group_ID'] = fused_df['Group_ID'].astype(str)
 merged_df = pd.merge(excel_df, fused_df, left_on='US_Number', right_on='Group_ID', how='inner')
 
 # 保存合并后的数据为新的 Excel 文件
-merged_output_path = r'C:\cat\data2.xlsx'
+merged_output_path = 'data2.xlsx'
 merged_df.to_excel(merged_output_path, index=False)
+
 
