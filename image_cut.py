@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 # 文件夹路径
-folder_path = 'C:\大学\大四\大四下\毕设\数据集\pic\p'
+folder_path = 'p'
 
 # 遍历文件夹中的所有文件
 for filename in os.listdir(folder_path):
@@ -36,3 +36,4 @@ for filename in os.listdir(folder_path):
         os.remove(file_path)
 
 print("处理完成！")
+
