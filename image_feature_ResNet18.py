@@ -8,8 +8,8 @@ import numpy as np
 import pandas as pd
 
 # 设置图像文件夹路径
-image_folder = r'C:\Crop'  # 请修改为你的图像文件夹路径
-save_path = r'C:\cat\patient_features_ResNet18.csv'  # 最终特征保存路径
+image_folder = 'Crop'  # 请修改为你的图像文件夹路径
+save_path = 'patient_features_ResNet18.csv'  # 最终特征保存路径
 
 # 定义预处理和标准化
 preprocess = T.Compose([
@@ -70,3 +70,4 @@ columns = ['Patient_ID'] + [f'Feature_{i+1}' for i in range(512)]
 df = pd.DataFrame(patient_features, columns=columns)
 df.to_csv(save_path, index=False)
 print(f"✅ 所有患者的图像特征已提取并保存到 {save_path}")
+
