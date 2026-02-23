@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 读取 CSV 文件，确保处理无误
-csv_path = r'C:\cat\patient_features_ResNet18.csv'
+csv_path = 'patient_features_ResNet18.csv'
 df = pd.read_csv(csv_path)
 
 # 提取患者编号的第一个数字作为分组 ID
@@ -22,6 +22,7 @@ fused_df_median = df.groupby('Group_ID')[feature_columns].median().reset_index()
 # 保存融合结果
 fused_df_mean.to_csv(r'C:\cat\patient_features_fusion_mean.csv', index=False)
 fused_df_median.to_csv(r'C:\cat\patient_features_fusion_median.csv', index=False)
+
 
 
 print("特征融合完成，结果已保存。")
