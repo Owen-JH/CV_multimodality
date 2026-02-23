@@ -31,7 +31,7 @@ def plot_roc_curve(model, X_test_scaled, y_test, model_name, color):
     plt.plot(fpr, tpr, label=f'{model_name} (AUC = {roc_auc:.2f})', color=color)
 
 # 读取Excel文件
-file_path = r'C:\大学\大四\大四下\毕设\数据集\data.xlsx'
+file_path = 'data.xlsx'
 data = pd.read_excel(file_path)
 
 # 计算每列缺失值的数量
@@ -212,4 +212,5 @@ plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.legend(loc="lower right")
 plt.show()
+
 
