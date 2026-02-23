@@ -27,8 +27,8 @@ def preprocess_image(image, target_size=(224, 224)):
     return final_image
 
 # 设置图像文件夹路径
-image_folder = r'C:\Pictures'  # 原始图像路径
-save_folder = r'C:\crop'  # 处理后图像保存路径
+image_folder = 'Pictures'  # 原始图像路径
+save_folder = 'crop'  # 处理后图像保存路径
 os.makedirs(save_folder, exist_ok=True)
 
 image_files = os.listdir(image_folder)
@@ -71,3 +71,4 @@ for image_file in image_files:
 total_images = len([f for f in image_files if f.endswith(('.jpg', '.png', '.bmp'))])
 print(f"\nTotal original images: {total_images}")
 print(f"Total patients: {len(patient_images)}")
+
