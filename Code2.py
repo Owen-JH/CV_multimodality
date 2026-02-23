@@ -30,7 +30,7 @@ def plot_roc_curve(model, X_test_scaled, y_test, model_name, color):
     plt.plot(fpr, tpr, label=f'{model_name} (AUC = {roc_auc:.2f})', color=color)
 
 # 读取Excel文件
-file_path = r'C:\cat\data2.xlsx'
+file_path = 'data2.xlsx'
 df = pd.read_excel(file_path)
 
 # Separate features (X) and target (y)
@@ -131,4 +131,5 @@ plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.legend(loc="lower right")
 plt.show()
+
 
